@@ -27,6 +27,7 @@ LLVM_ATTRIBUTE_NOINLINE static auto GetStackPointer() -> intptr_t {
 #endif
 }
 
+// Check for if stack is full or not
 auto IsStackSpaceNearlyExhausted() -> bool {
   if (bottom_of_stack == 0) {
     // Not initialized on the thread; always start a new thread.
